@@ -1,0 +1,84 @@
+/* Estilos para a página de Team Building */
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    background-color: #FAF6EF;
+    color: #323130;
+    margin: 0;
+    padding: 0;
+}
+
+.team-building h1 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #E28C82;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.workshops-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 30px 80px;
+}
+
+.workshop {
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, e a largura mínima inicial ajustada para 30% */
+    max-width: 450px; /* Limite de largura máxima para cada coluna */
+    padding: 20px;
+    text-align: justify;
+    margin: 0 15px; /* Adiciona uma margem entre os itens */
+}
+
+.workshop-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    max-height: 250px; /* Ajusta a altura máxima das imagens */
+}
+
+.workshop h2 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 1.8rem;
+    color: #C94C4C;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.workshop p {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1rem;
+    color: #323130;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.workshop ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 0 0 20px;
+    text-align: left;
+}
+
+.workshop ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #5E7961;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .workshops-container {
+        flex-direction: column; /* Ajusta para coluna em telas menores */
+        align-items: center;
+    }
+
+    .workshop {
+        max-width: 80%;  /* Aumenta a largura para 80% em telas menores */
+        margin-bottom: 30px;
+    }
+}

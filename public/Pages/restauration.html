@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Picardeau - restauration groupes</title>
+     <!-- Link CSS -->
+     <link rel="stylesheet" href="/css/main.css">
+     <link rel="stylesheet" href="/css/team-building.css">
+     <script src="/public/script/script.js"></script>
+ 
+      <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (necessário para dropdowns, carrosséis etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   
+
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+
+    
+    <main class="main-content">
+        <div class="text-container">
+          <h1>Restauration groupes</h1>
+          <p>Au Le Picardeau, transformez vos événements en expériences enrichissantes et conviviales. 
+            Nous vous proposons des activités de team building uniques et des repas thématiques qui renforcent la cohésion d'équipe dans une ambiance chaleureuse et détendue.
+             </p>
+          
+        </div>
+      </main>
+
+      <section class="team-building">
+       
+        <div class="workshops-container">
+            <!-- Cocktail Dînatoire -->
+            <div class="workshop">
+                <img src="/images/atelier-cuisine.jpg" alt="Cocktail" class="workshop-image">
+                <h2>Cocktail Dînatoire</h2>
+                <p>Laissez-vous inspirer et venez découvrir notre interprétation des cours de cuisine. Un voyage onirique où l'audace fait le grand huit et où les matières premières et le savoir-faire s'expriment dans la simplicité.</p>
+                
+            </div>
+
+            <!-- Barbecue -->
+            <div class="workshop">
+                <img src="/images/atelier-cocktail.jpg" alt="Barbecue" class="workshop-image">
+                <h2>Barbecue</h2>
+                <p>Offrez à vos équipes un moment de convivialité et de partage lors de votre prochain Team Building autour d'un atelier Mixologie.</p>
+                
+            </div>
+
+            <!-- Dîner à thème -->
+            <div class="workshop">
+                <img src="/images/apero-peinture.jpg" alt="dîner à thème" class="workshop-image">
+                <h2>Dîner à thème </h2>
+                <p>Découvrez l'univers de la peinture lors d'un atelier apéro-peinture de 2h30.</p>
+                <p><strong>Options de dîner</strong></p>
+                <ul>
+                    <li>Dîner italien</li>
+                    <li>Dîner brésilien</li>
+                    <li>Dîner mexicain</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- O div onde o footer será carregado -->
+    <div id="footer"></div>
+
+    <!-- Script para carregar o footer dinamicamente -->
+ <script>
+   // Carregar o conteúdo do arquivo footer.html e inserir no div com ID "footer"
+   fetch('/pages/footer.html')
+       .then(response => response.text())
+       .then(data => {
+           document.getElementById('footer').innerHTML = data;
+       });
+</script>
+
+     <!-- Script para carregar a navbar dinamicamente -->
+     <script>
+        // Carregar o conteúdo do arquivo navbar.html e inserir no div com ID "navbar"
+        fetch('/pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

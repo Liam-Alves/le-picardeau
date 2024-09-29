@@ -1,0 +1,759 @@
+
+@import url('https://db.onlinewebfonts.com/c/5cfbe76f00e7c4d6ba5d963f6c179606?family=Museo+W01+700');
+
+
+
+/* Definir as cores principais */
+:root {
+    --cor-clara: #FAF6EF;
+    --cor-preta: #323130;
+    --cor-verde: #5E7961;
+    --cor-azul-claro: #C5D5E0;
+    --cor-rosa-claro: #E28C82;
+    --cor-amarelo-suave: #FFE3AC;
+}
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    background-color: #f8f9fa;
+    color: #323130;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color:var(--cor-verde);
+}
+
+h1, h2 {
+    font-family: 'Museo W01 700', sans-serif; /* Usando a fonte Museo */
+    font-size: 4rem; /* Ajuste o tamanho conforme necessário */
+    font-weight: 700; /* Peso da fonte */
+    color: var(--cor-rosa-claro); /* Cor para o título, pode ajustar conforme necessário */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+}
+
+p {
+    font-family: 'Hind Madurai', sans-serif; /* Font padrão para o parágrafo */
+    font-size: 1.25rem; /* Tamanho do texto do parágrafo */
+    color: #323130; /* Cor do texto */
+    text-align: center; /* Centraliza o parágrafo */
+    margin-bottom: 40px; /* Espaçamento entre o parágrafo e o botão */
+}
+
+
+/* Estilo para a logo */
+.navbar-brand img {
+    max-height: 80px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 50px; /* Espaçamento para o logo não encostar nos itens de menu */
+    object-fit: contain; /* Garante que o logo não distorça */
+}
+
+/* Centralizar o logo */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo à esquerda e menu à direita */
+    align-items: center;
+    font-family: 'Hind Madurai', sans-serif; 
+    background-color: var(--cor-verde);
+    padding: 10px;
+}
+
+/* Estilo para os links do menu */
+.navbar-nav .nav-link {
+    color: #E28C82; /* Substitua por outra cor conforme necessário */
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e9ecef; /* Cor quando o mouse passar por cima */
+}
+
+/* Remover o fundo transparente padrão do Bootstrap */
+.navbar-light .navbar-nav .nav-link {
+    color: white; /* Texto branco no menu */
+}
+
+/* Estilo do dropdown */
+.navbar-nav .dropdown-menu {
+    background-color: var(--cor-verde); /* Fundo verde para o dropdown */
+    border: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--cor-clara); /* Texto branco no dropdown */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: var(--cor-amarelo-suave); /* Fundo ao passar o mouse no item do dropdown */
+    color: var(--cor-preta); /* Texto preto no hover */
+}
+
+
+/* Estilo do menu hamburguer */
+.navbar-toggler {
+    background-color: #5E7961; /* Cor do fundo para o botão */
+    border: 1px solid #fff; /* Para deixar uma borda branca ao redor */
+    border-radius: 5px; /* Deixar os cantos arredondados se necessário */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}/*Você pode usar qualquer valor de cor, inclusive valores em hexadecimal, se preferir. Exemplo para azul: stroke='%23007bff' (onde %23 é o código para # em URLs).*/
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+      display: block;
+      margin-left: auto; /* Isso move o botão para a direita */
+    }
+  }
+  
+
+a {
+    color: #f8f9fa; /* Links  */
+}
+
+a:hover {
+    color: #FFE3AC; /* Efeito hover dos links */
+}
+
+
+
+/* Estilo da imagem com bordas arredondadas e sombra */
+.custom-img {
+    width: 100%; /* Para garantir que a imagem ocupe toda a largura disponível no contêiner */
+    max-width: 1200px; /* Define um limite máximo de largura para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Limita a altura máxima da imagem */
+    border-bottom-left-radius: 40px; /* Arredonda o canto inferior esquerdo */
+    border-bottom-right-radius: 40px; /* Arredonda o canto inferior direito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Garante que a imagem se comporte como um bloco */
+    object-fit: cover; /* Garante que a imagem seja cortada de forma a cobrir completamente o contêiner */
+}
+
+
+
+/* Botão */
+.custom-btn {
+    font-family: 'Museo W01 700', sans-serif;
+    background-color: #E28C82; /* Laranja escuro */
+    color: #FFF; /* Texto branco */
+    padding: 12px 30px; /* Tamanho do padding */
+    border-radius: 50px; /* Bordas arredondadas */
+    text-align: center; /* Centralizar o texto */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-decoration: none; /* Remove sublinhado do link */
+    cursor: pointer; /* Mostra o cursor pointer no hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+    display: inline-block; /* Permite controlar padding e tamanho corretamente */
+    margin-top: 20px; /* Margem superior para separação */
+}
+
+.custom-btn:hover {
+    background-color: #C16C6A; /* Laranja mais escuro no hover */
+    color: #FFF; /* Mantém o texto branco no hover */
+}
+
+
+/* Ajuste o espaçamento e a largura para dispositivos móveis */
+@media (max-width: 768px) {
+    .col-md-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo do footer */
+.footer {
+    background-color: var(--cor-verde); /* Cor de fundo */
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9rem; /* Fonte menor para o footer */
+
+}
+
+.footer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 0,9rem;
+    font-weight: 300;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+    
+}
+
+.footer-address, .footer-contact {
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0;
+    
+}
+
+.footer-contact p, .footer-address p {
+    margin: 0; /* Remove as margens verticais para economizar espaço */
+}
+
+
+.footer-social img {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    transition: filter 0.3s;
+}
+
+.footer-social img:hover {
+    filter: brightness(1.3); /* Aumenta o brilho ao passar o mouse */
+}
+
+.footer-contact h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-address h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-social h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Direitos reservados*/
+.footer-bottom {
+    font-size: 10px !important;
+    color: var(--cor-preta); /* Certifique-se de que a cor também esteja visível */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-link, .footer-address, .footer-contact, .footer-social, .footer-section {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-social {
+        margin-top: 20px;
+    }
+}
+
+/* Estilo para o título principal */
+.main-content h1 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #5E7961; /* Verde escuro */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para o texto */
+  .text-container p {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #323130; /* Preto suave */
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto; /* Centraliza o parágrafo e adiciona espaçamento inferior */
+  }
+  
+  
+  /* Centralizando o container */
+  .text-container {
+    max-width: 800px; /* Limita a largura do container para centralizar */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    font-family: 'Hind Madurai', sans-serif; /* Fonte similar à da imagem */
+  }
+  
+
+  /* Estilo do título e do texto */
+.text-container h1 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #E28C82; /* Cor para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.text-container p {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.25rem; /* Tamanho do texto */
+    line-height: 1.8; /* Ajuste o espaçamento entre linhas */
+    color: #323130; /* Cor do texto */
+    text-align: justify; /* justifica o texto */
+    max-width: 700px; /* Limita a largura máxima do texto */
+    margin: 0 auto 30px auto; /* Centraliza o parágrafo */
+}
+
+/* Ajuste para o texto da página inicial ocupar toda a largura */
+.text-container-home {
+    width: 100%; /* O texto agora ocupa toda a largura */
+    padding: 20px; /* Adiciona padding para evitar que o texto encoste nas bordas */
+    max-width: 1200px; /* Adiciona um limite de largura máxima para uma melhor visualização */
+    margin: 0 auto; /* Centraliza o container dentro da página */
+    
+}
+
+/* Estilo do título específico da página inicial */
+.text-container-home h1 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #E28C82;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do parágrafo específico da página inicial */
+.text-container-home p {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #323130;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Estilo para o formulário de contato */
+.contact-form-container {
+    background-color: #FFA500; /* Laranja */
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-form-container h2 {
+    color: #333;
+    font-family: 'Museo W01 700', sans-serif;
+    margin-bottom: 20px;
+}
+
+.custom-btn-red {
+    background-color: #E28C82; /* Vermelho suave */
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.custom-btn-red:hover {
+    background-color: #C16C6A;
+}
+
+/* Estilo para o formulário de newsletter */
+.newsletter-container h3 {
+    font-family: 'Museo W01 700', sans-serif;
+    color: #5E7961; /* Verde escuro */
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor do mapa */
+}
+
+/* Estilo para a imagem na seção de contato */
+
+.custom-img-contact {
+    width: 80%; /* ajusta a imagem de acordo cim a largura do container */
+    max-height: 400px; /* Define um limite máximo para a altura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra à imagem */
+   
+}
+
+.custom-img-histoire {
+    width: 80%; /* ajusta a imagem de acordo cim a largura do container */
+    max-height: 600px; /* Define um limite máximo para a altura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra à imagem */
+  
+}
+
+/* Espaçamento maior entre as colunas */
+.row.g-5 {
+    gap: 20px; /* Ajusta o valor do espaçamento conforme necessário */
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 992px) {
+    .contact-form-container, .col-lg-5 {
+        margin-bottom: 30px; /* Adiciona mais espaçamento entre os elementos em telas pequenas */
+        max-width: 100%; /* Garante que as colunas não fiquem maiores que o necessário */
+    }
+}
+
+/*informaçoes de horario*/
+.container-fluid {
+    margin-bottom: 15px; /* Espaçamento entre os blocos */
+    font-size: 1rem; /* Tamanho da fonte dos horários */
+    color: #323130; /* Cor do texto */
+}
+
+h3 {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #5E7961;
+    font-family: 'Museo W01 700', sans-serif;
+    
+}
+
+.container-fluid strong {
+    font-size: 1.2rem; /* Tamanho da fonte dos títulos dos blocos */
+    color: var(--cor-rosa-claro); /* Cor para destacar os títulos dos blocos */
+}
+
+.horaires-container {
+    align-items: stretch; /* Faz com que todos os blocos tenham a mesma altura */
+}
+
+.horaires-block {
+    flex: 1;
+    min-width: 150px; /* Define uma largura mínima para os blocos */
+    text-align: center;
+    padding: 10px;
+}
+
+.horaires-block p {
+    margin: 0;
+}
+
+
+
+.hero-section {
+   
+    padding: 50px 0; /* Espaçamento vertical */
+}
+
+.hero-section h1 {
+    font-family: 'Museo W01 700', sans-serif; 
+    font-size: 4rem; /* Tamanho da fonte para o título */
+    color: #E24622; /* Cor vermelha */
+    margin-top: 80px;
+}
+
+.hero-section p {
+    font-family: 'Hind Madurai', sans-serif; /* Fonte usada no corpo do texto */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+}
+
+.hero-section .container {
+    max-width: 1200px; /* Limite da largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem; /* Ajuste do tamanho da fonte em telas menores */
+    }
+    .hero-section p {
+        font-size: 1rem; /* Ajuste do tamanho da fonte em telas menores */
+    }
+}
+.famiglia-section {
+    background-color: #FFA600; /* Cor de fundo laranja */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.famiglia-section h2 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 30px; /* Bordas mais arredondadas nos cartões */
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%; /* Garante que os cartões ocupem a largura total */
+    max-width: 300px; /* Limita a largura máxima dos cartões */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+}
+
+.image-container {
+    width: 100%;
+    max-width: 250px; /* Limita a largura da imagem */
+    height: 350px; /* Define a altura da imagem */
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    border-top-left-radius: 150px; /* Faz a parte superior ser arredondada */
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 0; /* Deixa a parte inferior reta */
+    border-bottom-right-radius: 0;
+    background-color: #fff; /* Cor de fundo para visualizar o formato */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o contêiner corretamente */
+}
+
+.team-member h3 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-member .role {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.2rem;
+    color: #FFA600; /* Cor laranja para a função */
+    margin-bottom: 10px;
+}
+
+.team-member .description {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .famiglia-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 280px; /* Ajusta a proporção para telas menores */
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+}
+
+.Fondazione {
+    padding: 50px 0; /* Espaçamento vertical */
+}
+
+.Fondazione p {
+    font-family: 'Hind Madurai', sans-serif; /* Fonte usada no corpo do texto */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+}
+
+.Fondazione .container {
+    max-width: 1200px; /* Limite da largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.custom-btn-Fondazione {
+    display: block; /* Faz o botão ocupar toda a linha */
+    width: fit-content; /* Define o tamanho com base no conteúdo */
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+    background-color: #E28C82; /* Cor de fundo */
+    color: #FFF; /* Cor do texto */
+    padding: 12px 30px; /* Espaçamento interno */
+    border-radius: 50px; /* Bordas arredondadas */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-decoration: none; /* Remove sublinhado */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn-.Fondazione {
+    background-color: #C16C6A; /* Cor de fundo no hover */
+}
+
+/* Estilos básicos para a galeria */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gallery {
+    padding: 20px;
+    margin: 50px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define colunas flexíveis */
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* Define uma proporção de 4:3, por exemplo */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso garante que a imagem se ajuste ao tamanho do container sem distorção */
+    display: block;
+  }
+
+/*sessao da Cucina*/
+.text-container-cucina{
+    max-width: 800px; /* Limita a largura do container para centralizar */
+  margin: 0 auto; /* Centraliza o texto horizontalmente */
+  padding: 20px; /* Espaçamento interno */
+  line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  font-family: 'Hind Madurai', sans-serif; /* Fonte similar à da imagem */
+}
+
+.text-container-cucina h1 {
+    font-family: 'Museo W01 700', sans-serif; /* Fonte para o título */
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: var(--cor-verde); /* Cor do título */
+  }
+  
+  .text-container-cucina p {
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+    text-align: justify; /* Justifica o texto para um alinhamento limpo */
+  }
+
+  .text-container {
+    max-width: 800px; /* Limita a largura do container para centralizar */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza todo o conteúdo do texto dentro do container */
+  }
+  
+  .custom-btn-table {
+    display: inline-block; /* Permite que o botão seja tratado como bloco em linha */
+    padding: 15px 30px; /* Ajusta o espaçamento interno do botão */
+    background-color: #d98b7d; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-weight: bold;
+    margin-top: 20px; /* Espaçamento superior para separar o botão do texto */
+  }
+  
+  .custom-btn-table:hover {
+    background-color: #bf7c6a; /* Efeito hover no botão */
+  }
+  
+  
+
+/* Informações do gîte */
+.gites-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background-color: #f9f5f0;
+}
+
+.gite {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Para garantir que duas colunas sejam exibidas */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.gite-text {
+    padding: 20px;
+    text-align: left;
+}
+
+.gite-text h2 {
+    color: #c94c4c;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.gite-text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.gite-button {
+    display: inline-block;
+    background-color: #ffa400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.gite-button:hover {
+    background-color: #ff8700;
+}
+
+/* Ajuste para manter a proporção 4:3 */
+.carousel-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 ratio */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
