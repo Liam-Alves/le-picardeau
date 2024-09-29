@@ -1,0 +1,9 @@
+# Ignorar arquivos temporários do macOS
+.DS_Store
+
+# Ignorar diretórios do VSCode
+.vscode/
+
+# Ignorar arquivos compilados
+*.log
+node_modules/
