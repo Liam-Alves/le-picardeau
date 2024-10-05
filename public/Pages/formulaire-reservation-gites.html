@@ -18,14 +18,6 @@
         <h1>Réserver votre séjour</h1>
         <form id="reservationForm" action="/reservar" method="POST">
             <div class="form-group">
-                <label for="gite">Choisissez le Gîte :</label>
-                <select id="gite" name="gite" required>
-                    <option value="chic-cosy">Chic et Cosy</option>
-                    <option value="studio-vert">Studio au Vert</option>
-                </select>
-            </div>
-
-            <div class="form-group">
                 <label for="checkin">Date d'arrivée :</label>
                 <input type="date" id="checkin" name="checkin" required>
             </div>
@@ -33,6 +25,13 @@
             <div class="form-group">
                 <label for="checkout">Date de départ :</label>
                 <input type="date" id="checkout" name="checkout" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gite">Choisissez le Gîte :</label>
+                <select id="gite" name="gite" required>
+                    <!-- As opções de gîte serão preenchidas dinamicamente via script -->
+                </select>
             </div>
 
             <div class="form-group">
@@ -75,3 +74,4 @@
 </body>
 
 </html>
+

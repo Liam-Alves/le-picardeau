@@ -5,12 +5,13 @@
 
 /* Definir as cores principais */
 :root {
-    --cor-clara: #FAF6EF;
+    --cor-clara: #F8E8D8;
     --cor-preta: #323130;
-    --cor-verde: #5E7961;
-    --cor-azul-claro: #C5D5E0;
-    --cor-rosa-claro: #E28C82;
-    --cor-amarelo-suave: #FFE3AC;
+    --cor-emerald: #1E402D;
+    --cor-eucalyptus: #567365;
+    --cor-tiki-torch: #BF5E49;
+    --cor-glazed-pottery: #D9B9A7;
+    --cor-peacoat : #A67153;
 }
 
 body {
@@ -29,7 +30,7 @@ h1, h2 {
     font-family: 'Museo W01 700', sans-serif; /* Usando a fonte Museo */
     font-size: 4rem; /* Ajuste o tamanho conforme necessário */
     font-weight: 700; /* Peso da fonte */
-    color: var(--cor-rosa-claro); /* Cor para o título, pode ajustar conforme necessário */
+    color: var(--cor-tiki-torch); /* Cor para o título, pode ajustar conforme necessário */
     text-align: center; /* Centraliza o título */
     margin-bottom: 50px; /* Espaço abaixo do título */
 }
@@ -37,7 +38,7 @@ h1, h2 {
 p {
     font-family: 'Hind Madurai', sans-serif; /* Font padrão para o parágrafo */
     font-size: 1.25rem; /* Tamanho do texto do parágrafo */
-    color: #323130; /* Cor do texto */
+    color: (var(--cor-preta)); /* Cor do texto */
     text-align: center; /* Centraliza o parágrafo */
     margin-bottom: 40px; /* Espaçamento entre o parágrafo e o botão */
 }
@@ -56,18 +57,18 @@ p {
     justify-content: space-between; /* Logo à esquerda e menu à direita */
     align-items: center;
     font-family: 'Hind Madurai', sans-serif; 
-    background-color: var(--cor-verde);
+    background-color: var(--cor-emerald);
     padding: 10px;
 }
 
 /* Estilo para os links do menu */
 .navbar-nav .nav-link {
-    color: #E28C82; /* Substitua por outra cor conforme necessário */
+    color: var(--cor-glazed-pottery); /* Substitua por outra cor conforme necessário */
     font-size: 1.2rem; /* Ajuste o tamanho da fonte */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #e9ecef; /* Cor quando o mouse passar por cima */
+    color: var(--cor-tiki-torch); /* Cor quando o mouse passar por cima */
 }
 
 /* Remover o fundo transparente padrão do Bootstrap */
@@ -77,7 +78,7 @@ p {
 
 /* Estilo do dropdown */
 .navbar-nav .dropdown-menu {
-    background-color: var(--cor-verde); /* Fundo verde para o dropdown */
+    background-color: var(--cor-eucalyptus); /* Fundo verde para o dropdown */
     border: none;
 }
 
@@ -86,14 +87,14 @@ p {
 }
 
 .navbar-nav .dropdown-item:hover {
-    background-color: var(--cor-amarelo-suave); /* Fundo ao passar o mouse no item do dropdown */
+    background-color: var(--cor-eucalyptus); /* Fundo ao passar o mouse no item do dropdown */
     color: var(--cor-preta); /* Texto preto no hover */
 }
 
 
 /* Estilo do menu hamburguer */
 .navbar-toggler {
-    background-color: #5E7961; /* Cor do fundo para o botão */
+    background-color: var(--cor-emerald); /* Cor do fundo para o botão */
     border: 1px solid #fff; /* Para deixar uma borda branca ao redor */
     border-radius: 5px; /* Deixar os cantos arredondados se necessário */
 }
@@ -111,11 +112,11 @@ p {
   
 
 a {
-    color: #f8f9fa; /* Links  */
+    color: var(--cor-clara); /* Links  */
 }
 
 a:hover {
-    color: #FFE3AC; /* Efeito hover dos links */
+    color: var(--cor-glazed-pottery); /* Efeito hover dos links */
 }
 
 
@@ -139,7 +140,7 @@ a:hover {
 /* Botão */
 .custom-btn {
     font-family: 'Museo W01 700', sans-serif;
-    background-color: #E28C82; /* Laranja escuro */
+    background-color: var(--cor-peacoat); /* Laranja escuro */
     color: #FFF; /* Texto branco */
     padding: 12px 30px; /* Tamanho do padding */
     border-radius: 50px; /* Bordas arredondadas */
@@ -155,7 +156,7 @@ a:hover {
 }
 
 .custom-btn:hover {
-    background-color: #C16C6A; /* Laranja mais escuro no hover */
+    background-color: var(--cor-peacoat); /* Laranja mais escuro no hover */
     color: #FFF; /* Mantém o texto branco no hover */
 }
 
@@ -170,15 +171,15 @@ a:hover {
 
 /* Estilo do footer */
 .footer {
-    background-color: var(--cor-verde); /* Cor de fundo */
-    color: white;
+    background-color: var(--cor-emerald); /* Cor de fundo */
+    color: var(--cor-clara);
     padding: 20px 0;
     font-size: 0.9rem; /* Fonte menor para o footer */
 
 }
 
 .footer-link a {
-    color: white;
+    color: var(--cor-glazed-pottery);
     text-decoration: none;
     font-size: 0,9rem;
     font-weight: 300;
@@ -253,7 +254,7 @@ a:hover {
 .main-content h1 {
     font-family: 'Museo W01 700', sans-serif;
     font-size: 3rem;
-    color: #5E7961; /* Verde escuro */
+    color: var(--cor-emerald); /* Verde escuro */
     text-align: center;
     margin-bottom: 20px;
   }
@@ -286,7 +287,7 @@ a:hover {
 .text-container h1 {
     font-family: 'Museo W01 700', sans-serif;
     font-size: 3rem;
-    color: #E28C82; /* Cor para o título */
+    color: var(--cor-tiki-torch); /* Cor para o título */
     text-align: center; /* Centraliza o título */
     margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
@@ -314,7 +315,7 @@ a:hover {
 .text-container-home h1 {
     font-family: 'Museo W01 700', sans-serif;
     font-size: 3rem;
-    color: #E28C82;
+    color: var(--cor-tiki-torch);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -331,20 +332,20 @@ a:hover {
 
 /* Estilo para o formulário de contato */
 .contact-form-container {
-    background-color: #FFA500; /* Laranja */
+    background-color: var(--cor-eucalyptus); /* Laranja */
     padding: 30px;
     border-radius: 20px;
     margin-bottom: 40px;
 }
 
 .contact-form-container h2 {
-    color: #333;
+    color: var(--cor-glazed-pottery);
     font-family: 'Museo W01 700', sans-serif;
     margin-bottom: 20px;
 }
 
 .custom-btn-red {
-    background-color: #E28C82; /* Vermelho suave */
+    background-color: var(--cor-peacoat); /* Vermelho suave */
     color: #FFF;
     padding: 10px 20px;
     border-radius: 30px;
@@ -355,13 +356,13 @@ a:hover {
 }
 
 .custom-btn-red:hover {
-    background-color: #C16C6A;
+    background-color: var(--cor-glazed-pottery);
 }
 
 /* Estilo para o formulário de newsletter */
 .newsletter-container h3 {
     font-family: 'Museo W01 700', sans-serif;
-    color: #5E7961; /* Verde escuro */
+    color: var(--cor-glazed-pottery); /* Verde escuro */
 }
 
 .map-container {
@@ -426,7 +427,7 @@ h3 {
 
 .container-fluid strong {
     font-size: 1.2rem; /* Tamanho da fonte dos títulos dos blocos */
-    color: var(--cor-rosa-claro); /* Cor para destacar os títulos dos blocos */
+    color: var(--cor-tiki-torch); /* Cor para destacar os títulos dos blocos */
 }
 
 .horaires-container {

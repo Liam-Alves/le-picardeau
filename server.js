@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser'); // Adiciona o body-parser para lidar com formulários
+const bodyParser = require('body-parser'); 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -9,27 +9,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configura o body-parser para processar dados enviados via POST
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); // Necessário para lidar com dados em JSON
+app.use(bodyParser.json()); 
 
 // Importa as rotas
-const router = require('./Router/allRoutes');
+const router = require('./Router/allRoutes'); // O allRoutes.js irá gerenciar a lógica de /reservar
 app.use('/', router);
-
-// Rota POST para processar o formulário de reserva
-app.post('/reservar', (req, res) => {
-    const { gite, checkin, checkout, guests, name, telephone, email } = req.body;
-
-    // Aqui você pode adicionar validação e lógica de negócio:
-    // - Salvar a reserva no banco de dados (se houver)
-    // - Verificar disponibilidade (para evitar overbooking)
-    // - Enviar e-mail de confirmação
-
-    // Exemplo simples de resposta (apenas para teste)
-    console.log("Dados recebidos da reserva:", req.body);
-
-    // Retornar uma resposta para o usuário
-    res.json({ message: "Réservation réussie!", data: req.body });
-});
 
 // Inicia o servidor
 app.listen(PORT, () => {

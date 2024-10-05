@@ -25,7 +25,7 @@
 }
 
 .gite-text h2 {
-    color: #c94c4c;
+    color: var(--cor-tiki-torch);
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -39,7 +39,7 @@
 
 .gite-button {
     display: inline-block;
-    background-color: #ffa400;
+    background-color: #A67153;
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
@@ -53,7 +53,7 @@
 }
 
 .gite-button:hover {
-    background-color: #ff8700;
+    background-color: #BF5E49;
 }
 
 /* Ajuste para manter a proporção 4:3 */
