@@ -58,12 +58,28 @@ router.get('/reserver-table', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/Pages/reserver-table.html'));
 });
 
-router.get('/reservar', (req, res) => {
+router.get('/reservation', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/Pages/formulaire-reservation-gites.html'));
 });
 
+router.get('/mentions-legales', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/Pages/mentions-legales.html'));
+});
+
+router.get('/politique-cookies', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/Pages/politique-cookies.html'));
+});
+
+router.get('/politique-confidentialite', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/Pages/politique-confidentialite.html'));
+});
+
+router.get('/conditions-dutilisation', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/Pages/conditions-dutilisation.html'));
+});
+
 // Rota para processar o formulário de reserva de gîte
-router.post('/reservar', (req, res) => {
+router.post('/reservation', (req, res) => {
     const { gite, checkin, checkout, guests, name, telephone, email } = req.body;
 
     // Definindo as capacidades máximas para cada gîte

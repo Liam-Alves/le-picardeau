@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Picardeau - Notre Histoire</title>
+     <!-- Link CSS -->
+     <link rel="stylesheet" href="/css/main.css">
+     <script src="/public/script/script.js"></script>
+ 
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (necessário para dropdowns, carrosséis etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+    
+    
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+    
+    <main class="main-content">
+        <div class="text-container">
+          <h2>Politique en Matière de Cookies</h2><br>
+<h4>1. Qu'est-ce qu'un cookie ?</h4>
+Un cookie est un petit fichier texte déposé sur votre appareil (ordinateur, smartphone, tablette) lorsque vous visitez un site internet. Il permet à ce site de mémoriser vos actions et préférences (comme la langue, la taille de police, etc.) pendant un certain temps, afin que vous n'ayez pas à les reconfigurer chaque fois que vous revenez sur le site ou naviguez d'une page à une autre.
+<br>
+<h4> Quels cookies utilisons-nous ?</h4>
+Nous utilisons différents types de cookies sur notre site Le Picardeau, chacun ayant un objectif spécifique :
+
+Cookies strictement nécessaires : Ces cookies sont essentiels pour vous permettre de naviguer sur notre site et d'utiliser ses fonctionnalités. Sans ces cookies, les services que vous avez demandés, tels que la réservation, ne peuvent être fournis.
+
+Cookies de performance : Ces cookies collectent des informations sur la façon dont les visiteurs utilisent notre site, comme les pages les plus visitées ou les messages d’erreur rencontrés. Ils sont utilisés pour améliorer le fonctionnement du site.
+
+Cookies fonctionnels : Ces cookies permettent au site de se souvenir des choix que vous faites (tels que votre nom d'utilisateur, votre langue ou votre région) et de fournir des fonctionnalités améliorées et plus personnelles.
+
+Cookies de publicité et de ciblage : Ces cookies sont utilisés pour vous proposer des publicités pertinentes en fonction de vos intérêts.
+<br>
+<h4>3. Durée de conservation des cookies</h4>
+Les cookies ont une durée de vie limitée. Certains cookies sont effacés dès que vous fermez votre navigateur (cookies de session), tandis que d'autres restent sur votre appareil jusqu'à ce qu'ils expirent ou que vous les supprimiez manuellement (cookies persistants).
+<br>
+<h4>4. Comment contrôler les cookies ?</h4>
+Vous avez le droit de contrôler et de gérer l'utilisation des cookies sur notre site. Vous pouvez configurer vos préférences en matière de cookies à tout moment en modifiant les paramètres de votre navigateur ou en utilisant notre gestionnaire de cookies sur le site.
+
+Voici comment procéder pour désactiver les cookies sur différents navigateurs :
+
+<li> Chrome : Allez dans les paramètres > Confidentialité et sécurité > Paramètres des sites > Cookies et autres données de sites.</li>
+<li>Mozilla Firefox : Allez dans les préférences > Vie privée et sécurité > Cookies et données de sites.</li>
+<li>Microsoft Edge : Allez dans les paramètres > Cookies et autorisations de site > Gérer et supprimer les cookies.</li>
+<li>Safari : Allez dans les préférences > Confidentialité > Bloquer tous les cookies.</li><br>
+Notez que la désactivation de certains cookies peut affecter la fonctionnalité de notre site et limiter votre expérience de navigation.<br>
+
+<h4>5. Cookies tiers</h4>
+Le Picardeau utilise également des cookies fournis par des tiers. Ces cookies sont utilisés par des services externes comme les outils d'analyse et de publicité.
+
+Google Analytics : Ces cookies nous permettent de recueillir des informations sur l’utilisation de notre site afin de mieux comprendre comment les utilisateurs interagissent avec celui-ci. Les données collectées sont anonymisées.
+
+Réseaux sociaux : Nous pouvons utiliser des cookies liés aux services de réseaux sociaux (tels que Facebook, Instagram) pour vous permettre de partager du contenu ou pour afficher du contenu intégré.
+<br>
+<h4>6. Votre consentement</h4>
+En naviguant sur notre site, vous acceptez l'utilisation des cookies conformément à cette politique, sauf si vous avez désactivé les cookies dans les paramètres de votre navigateur ou via notre gestionnaire de cookies.
+
+<br><h4>7. Modification de notre politique en matière de cookies</h4>
+Le Picardeau se réserve le droit de modifier cette politique à tout moment. Nous vous encourageons à consulter cette page régulièrement pour vous tenir informé des éventuels changements.
+<br>
+<h4>8. Contact</h4>
+Pour toute question concernant notre utilisation des cookies ou pour exercer vos droits en matière de protection des données, vous pouvez nous contacter à l'adresse suivante :
+<br>
+E-mail : contact@lepicardeau.com<br>
+Adresse postale : 5 Rue du Picardeau, 77140 Nemours, France
+
+</div>
+
+      </main>
+
+      <!-- O div onde o footer será carregado -->
+    <div id="footer"></div>
+
+    <!-- Script para carregar o footer dinamicamente -->
+ <script>
+   // Carregar o conteúdo do arquivo footer.html e inserir no div com ID "footer"
+   fetch('/pages/footer.html')
+       .then(response => response.text())
+       .then(data => {
+           document.getElementById('footer').innerHTML = data;
+       });
+</script>
+
+     <!-- Script para carregar a navbar dinamicamente -->
+     <script>
+        // Carregar o conteúdo do arquivo navbar.html e inserir no div com ID "navbar"
+        fetch('/pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+
+</body>
+</html>

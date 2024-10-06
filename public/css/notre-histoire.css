@@ -1,0 +1,160 @@
+
+.hero-section {
+   
+    padding: 80px 0; /* Espaçamento vertical */
+  
+}
+
+.hero-section h1 {
+    font-family: 'Museo W01 700', sans-serif; 
+    font-size: 4rem; /* Tamanho da fonte para o título */
+    color: var(--cor-tiki-torch); /* Cor vermelha */
+    margin-top: 80px;
+}
+
+.hero-section p {
+    font-family: 'Hind Madurai', sans-serif; /* Fonte usada no corpo do texto */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+}
+
+.hero-section .container {
+    max-width: 1300px; /* Limite da largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+   
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem; /* Ajuste do tamanho da fonte em telas menores */
+    }
+    .hero-section p {
+        font-size: 1rem; /* Ajuste do tamanho da fonte em telas menores */
+    }
+}
+.famiglia-section {
+    background-color: var(--cor-eucalyptus); /* Cor de fundo laranja */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.famiglia-section h2 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 30px; /* Bordas mais arredondadas nos cartões */
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%; /* Garante que os cartões ocupem a largura total */
+    max-width: 300px; /* Limita a largura máxima dos cartões */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+}
+
+.image-container {
+    width: 100%;
+    max-width: 250px; /* Limita a largura da imagem */
+    height: 350px; /* Define a altura da imagem */
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    border-top-left-radius: 150px; /* Faz a parte superior ser arredondada */
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 0; /* Deixa a parte inferior reta */
+    border-bottom-right-radius: 0;
+    background-color: #fff; /* Cor de fundo para visualizar o formato */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o contêiner corretamente */
+}
+
+.team-member h3 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-member .role {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.2rem;
+    color: var(--cor-tiki-torch); /* Cor laranja para a função */
+    margin-bottom: 10px;
+}
+
+.team-member .description {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .famiglia-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 280px; /* Ajusta a proporção para telas menores */
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+}
+
+.Fondazione {
+    padding: 50px 0; /* Espaçamento vertical */
+}
+
+.Fondazione p {
+    font-family: 'Hind Madurai', sans-serif; /* Fonte usada no corpo do texto */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+}
+
+.Fondazione .container {
+    max-width: 1200px; /* Limite da largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.custom-btn-Fondazione {
+    display: block; /* Faz o botão ocupar toda a linha */
+    width: fit-content; /* Define o tamanho com base no conteúdo */
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+    background-color: #ebc57c; /* Cor de fundo */
+    color: #173426; /* Cor do texto */
+    padding: 12px 30px; /* Espaçamento interno */
+    border-radius: 50px; /* Bordas arredondadas */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-decoration: none; /* Remove sublinhado */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn-.Fondazione {
+    background-color: #516b60; /* Cor de fundo no hover */
+}

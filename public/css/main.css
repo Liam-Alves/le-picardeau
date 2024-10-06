@@ -5,13 +5,13 @@
 
 /* Definir as cores principais */
 :root {
-    --cor-clara: #F8E8D8;
+    --cor-clara: #f8e4d2;
     --cor-preta: #323130;
-    --cor-emerald: #1E402D;
-    --cor-eucalyptus: #567365;
-    --cor-tiki-torch: #BF5E49;
-    --cor-glazed-pottery: #D9B9A7;
-    --cor-peacoat : #A67153;
+    --cor-emerald: #173426;
+    --cor-eucalyptus: #516b60;
+    --cor-tiki-torch: #c06146;
+    --cor-glazed-pottery: #dcbea6;
+    --cor-peacoat : #ebc57c;
 }
 
 body {
@@ -58,13 +58,14 @@ p {
     align-items: center;
     font-family: 'Hind Madurai', sans-serif; 
     background-color: var(--cor-emerald);
-    padding: 10px;
+    padding: 80px;
 }
 
 /* Estilo para os links do menu */
 .navbar-nav .nav-link {
-    color: var(--cor-glazed-pottery); /* Substitua por outra cor conforme necessário */
+    color: var(--cor-clara); /* Substitua por outra cor conforme necessário */
     font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    
 }
 
 .navbar-nav .nav-link:hover {
@@ -88,7 +89,7 @@ p {
 
 .navbar-nav .dropdown-item:hover {
     background-color: var(--cor-eucalyptus); /* Fundo ao passar o mouse no item do dropdown */
-    color: var(--cor-preta); /* Texto preto no hover */
+    color: var(--cor-glazed-pottery); /* Texto preto no hover */
 }
 
 
@@ -141,7 +142,7 @@ a:hover {
 .custom-btn {
     font-family: 'Museo W01 700', sans-serif;
     background-color: var(--cor-peacoat); /* Laranja escuro */
-    color: #FFF; /* Texto branco */
+    color: var(--cor-emerald); /* Texto branco */
     padding: 12px 30px; /* Tamanho do padding */
     border-radius: 50px; /* Bordas arredondadas */
     text-align: center; /* Centralizar o texto */
@@ -175,62 +176,33 @@ a:hover {
     color: var(--cor-clara);
     padding: 20px 0;
     font-size: 0.9rem; /* Fonte menor para o footer */
-
 }
 
-.footer-link a {
-    color: var(--cor-glazed-pottery);
-    text-decoration: none;
-    font-size: 0,9rem;
-    font-weight: 300;
+.footer-address, .footer-contact, .footer-social {
+    text-align: center; /* Centralizar o conteúdo para todos os dispositivos */
+    margin-bottom: 40px; /* Espaçamento inferior entre os blocos */
 }
 
-.footer-link a:hover {
-    text-decoration: underline;
-    
+.footer-address h5, .footer-contact h5, .footer-social h5 {
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaçamento inferior entre o título e o conteúdo */
 }
 
-.footer-address, .footer-contact {
-    font-size: 10px;
+.footer p, .footer a {
+    font-size: 0.9rem;
     font-weight: 300;
     line-height: 1.4;
-    margin: 0;
-    
+    color: var(--cor-clara); /* Mesma cor para os links */
 }
 
-.footer-contact p, .footer-address p {
-    margin: 0; /* Remove as margens verticais para economizar espaço */
+.footer a:hover {
+    text-decoration: underline;
 }
 
-
-.footer-social img {
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    transition: filter 0.3s;
+.footer-social a {
+    margin: 0 10px; /* Espaçamento horizontal entre os ícones de redes sociais */
 }
 
-.footer-social img:hover {
-    filter: brightness(1.3); /* Aumenta o brilho ao passar o mouse */
-}
-
-.footer-contact h5 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.footer-address h5 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.footer-social h5 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
 /* Direitos reservados*/
 .footer-bottom {
     font-size: 10px !important;
@@ -266,7 +238,7 @@ a:hover {
     line-height: 1.8;
     color: #323130; /* Preto suave */
     text-align: center;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 30px auto; /* Centraliza o parágrafo e adiciona espaçamento inferior */
   }
   
@@ -298,7 +270,7 @@ a:hover {
     line-height: 1.8; /* Ajuste o espaçamento entre linhas */
     color: #323130; /* Cor do texto */
     text-align: justify; /* justifica o texto */
-    max-width: 700px; /* Limita a largura máxima do texto */
+    max-width: 1200px; /* Limita a largura máxima do texto */
     margin: 0 auto 30px auto; /* Centraliza o parágrafo */
 }
 
@@ -326,8 +298,12 @@ a:hover {
     font-size: 1.25rem;
     line-height: 1.8;
     color: #323130;
-    text-align: center;
+    text-align: justify;
     margin-bottom: 40px;
+}
+
+.text-container-home li{
+    text-align: justify;
 }
 
 /* Estilo para o formulário de contato */
@@ -336,6 +312,7 @@ a:hover {
     padding: 30px;
     border-radius: 20px;
     margin-bottom: 40px;
+    
 }
 
 .contact-form-container h2 {
@@ -431,7 +408,8 @@ h3 {
 }
 
 .horaires-container {
-    align-items: stretch; /* Faz com que todos os blocos tenham a mesma altura */
+    align-items:stretch; /* Faz com que todos os blocos tenham a mesma altura */
+    
 }
 
 .horaires-block {
@@ -444,197 +422,6 @@ h3 {
 .horaires-block p {
     margin: 0;
 }
-
-
-
-.hero-section {
-   
-    padding: 50px 0; /* Espaçamento vertical */
-}
-
-.hero-section h1 {
-    font-family: 'Museo W01 700', sans-serif; 
-    font-size: 4rem; /* Tamanho da fonte para o título */
-    color: #E24622; /* Cor vermelha */
-    margin-top: 80px;
-}
-
-.hero-section p {
-    font-family: 'Hind Madurai', sans-serif; /* Fonte usada no corpo do texto */
-    font-size: 1.2rem;
-    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
-    color: #333; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento entre parágrafos */
-}
-
-.hero-section .container {
-    max-width: 1200px; /* Limite da largura do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-}
-
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem; /* Ajuste do tamanho da fonte em telas menores */
-    }
-    .hero-section p {
-        font-size: 1rem; /* Ajuste do tamanho da fonte em telas menores */
-    }
-}
-.famiglia-section {
-    background-color: #FFA600; /* Cor de fundo laranja */
-    padding: 50px 0;
-    text-align: center;
-}
-
-.famiglia-section h2 {
-    font-family: 'Museo W01 700', sans-serif;
-    font-size: 3rem;
-    color: #fff;
-    margin-bottom: 50px;
-}
-
-.team-member {
-    background-color: #fff;
-    border-radius: 30px; /* Bordas mais arredondadas nos cartões */
-    padding: 30px 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease;
-    text-align: center;
-    width: 100%; /* Garante que os cartões ocupem a largura total */
-    max-width: 300px; /* Limita a largura máxima dos cartões */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.team-member:hover {
-    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
-}
-
-.image-container {
-    width: 100%;
-    max-width: 250px; /* Limita a largura da imagem */
-    height: 350px; /* Define a altura da imagem */
-    overflow: hidden;
-    margin: 0 auto 20px auto;
-    border-top-left-radius: 150px; /* Faz a parte superior ser arredondada */
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 0; /* Deixa a parte inferior reta */
-    border-bottom-right-radius: 0;
-    background-color: #fff; /* Cor de fundo para visualizar o formato */
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o contêiner corretamente */
-}
-
-.team-member h3 {
-    font-family: 'Museo W01 700', sans-serif;
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.team-member .role {
-    font-family: 'Hind Madurai', sans-serif;
-    font-size: 1.2rem;
-    color: #FFA600; /* Cor laranja para a função */
-    margin-bottom: 10px;
-}
-
-.team-member .description {
-    font-family: 'Hind Madurai', sans-serif;
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .team-member {
-        margin-bottom: 20px;
-    }
-
-    .famiglia-section h2 {
-        font-size: 2.5rem;
-    }
-
-    .image-container {
-        width: 200px;
-        height: 280px; /* Ajusta a proporção para telas menores */
-        border-top-left-radius: 100px;
-        border-top-right-radius: 100px;
-    }
-}
-
-.Fondazione {
-    padding: 50px 0; /* Espaçamento vertical */
-}
-
-.Fondazione p {
-    font-family: 'Hind Madurai', sans-serif; /* Fonte usada no corpo do texto */
-    font-size: 1.2rem;
-    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
-    color: #333; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento entre parágrafos */
-}
-
-.Fondazione .container {
-    max-width: 1200px; /* Limite da largura do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-}
-
-.custom-btn-Fondazione {
-    display: block; /* Faz o botão ocupar toda a linha */
-    width: fit-content; /* Define o tamanho com base no conteúdo */
-    margin: 20px auto; /* Centraliza o botão horizontalmente */
-    background-color: #E28C82; /* Cor de fundo */
-    color: #FFF; /* Cor do texto */
-    padding: 12px 30px; /* Espaçamento interno */
-    border-radius: 50px; /* Bordas arredondadas */
-    font-size: 1.2rem; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    text-decoration: none; /* Remove sublinhado */
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.custom-btn-.Fondazione {
-    background-color: #C16C6A; /* Cor de fundo no hover */
-}
-
-/* Estilos básicos para a galeria */
-
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.gallery {
-    padding: 20px;
-    margin: 50px;
-  }
-  
-  .gallery-grid {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define colunas flexíveis */
-  }
-  
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 3; /* Define uma proporção de 4:3, por exemplo */
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Isso garante que a imagem se ajuste ao tamanho do container sem distorção */
-    display: block;
-  }
 
 /*sessao da Cucina*/
 .text-container-cucina{
@@ -651,7 +438,7 @@ body, html {
     font-family: 'Museo W01 700', sans-serif; /* Fonte para o título */
     font-size: 2.5rem; /* Tamanho do título */
     margin-bottom: 20px; /* Espaçamento abaixo do título */
-    color: var(--cor-verde); /* Cor do título */
+    color: var(--cor-tiki-torch); /* Cor do título */
   }
   
   .text-container-cucina p {
@@ -667,9 +454,9 @@ body, html {
   }
   
   .custom-btn-table {
-    display: inline-block; /* Permite que o botão seja tratado como bloco em linha */
+    display:inline-block;
     padding: 15px 30px; /* Ajusta o espaçamento interno do botão */
-    background-color: #d98b7d; /* Cor do botão */
+    background-color: var(--cor-peacoat); /* Cor do botão */
     color: white; /* Cor do texto do botão */
     text-decoration: none; /* Remove o sublinhado do link */
     border-radius: 25px; /* Bordas arredondadas */
@@ -678,83 +465,22 @@ body, html {
   }
   
   .custom-btn-table:hover {
-    background-color: #bf7c6a; /* Efeito hover no botão */
+    background-color: var(--cor-glazed-pottery); /* Efeito hover no botão */
   }
   
   
-
-/* Informações do gîte */
-.gites-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 40px;
-    background-color: #f9f5f0;
+.text-container-formulaire{
+    width: 100%; /* O texto agora ocupa toda a largura */
+    padding: 20px; /* Adiciona padding para evitar que o texto encoste nas bordas */
+    max-width: 1200px; /* Adiciona um limite de largura máxima para uma melhor visualização */
+    margin: 0 auto; /* Centraliza o container dentro da página */
+    background-color: var(--cor-eucalyptus);
+    margin-bottom: 50px;
 }
 
-.gite {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 20px); /* Para garantir que duas colunas sejam exibidas */
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-
-.gite-text {
-    padding: 20px;
-    text-align: left;
-}
-
-.gite-text h2 {
-    color: #c94c4c;
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.gite-text p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.gite-button {
-    display: inline-block;
-    background-color: #ffa400;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    width: fit-content;
+.text-container-formulaire h3 {
+    color: var(--cor-clara);
     text-align: center;
-    margin: 20px auto;
+   padding-top: 30px;
+   padding-bottom: 30px;
 }
-
-.gite-button:hover {
-    background-color: #ff8700;
-}
-
-/* Ajuste para manter a proporção 4:3 */
-.carousel-item {
-    position: relative;
-    width: 100%;
-    padding-bottom: 75%; /* 4:3 ratio */
-    overflow: hidden;
-}
-
-.carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-

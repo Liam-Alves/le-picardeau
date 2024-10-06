@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Picardeau - Notre Histoire</title>
+     <!-- Link CSS -->
+     <link rel="stylesheet" href="/css/main.css">
+     <script src="/public/script/script.js"></script>
+ 
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (necessário para dropdowns, carrosséis etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+    
+    
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+    
+    <main class="main-content">
+        <div class="text-container">
+          <h2>Politique de Confidentialité</h2><br>
+<h4>1. Introduction</h4>
+Cette Politique de Confidentialité a pour objectif de vous informer de la manière dont nous collectons, utilisons et protégeons vos données personnelles lorsque vous utilisez notre site Le Picardeau (ci-après dénommé "le Site"). En naviguant sur notre Site, vous acceptez les pratiques décrites dans cette Politique.
+
+<h4>2. Qui sommes-nous ?</h4>
+Le Picardeau est un établissement situé à 5 Rue du Picardeau, 77140 Nemours, France, dédié à l’hébergement, à la restauration et à l'organisation d'événements. Nous nous engageons à respecter votre vie privée et à protéger les données que vous nous confiez.
+
+<h4>3. Les données personnelles que nous collectons</h4>
+Nous pouvons être amenés à collecter les informations suivantes :
+
+Informations d'identité : nom, prénom, adresse e-mail, numéro de téléphone, etc.
+Données de réservation : dates de séjour, nombre de personnes, gîte choisi, demandes spéciales, etc.
+Données de paiement : informations liées aux transactions pour les réservations.
+Données de navigation : adresse IP, type de navigateur, pages consultées, etc.
+
+<h4>4. Pourquoi collectons-nous ces données ?</h4>
+Les données personnelles que nous collectons sont utilisées pour :
+
+Gérer vos réservations : traitement des demandes de réservation de gîtes, gestion des annulations ou modifications, etc.
+Améliorer votre expérience utilisateur : personnalisation des services et du contenu proposé sur le Site.
+Communication : répondre à vos questions, envoyer des informations sur vos réservations, etc.
+Marketing : avec votre consentement, nous pouvons vous envoyer des offres promotionnelles, newsletters, etc.
+Statistiques : analyser le trafic du site pour améliorer nos services.
+
+<h4>5. Comment sont collectées vos données ?</h4>
+Nous collectons vos données personnelles lorsque :
+
+Vous remplissez un formulaire sur notre site (réservation, contact).
+Vous interagissez avec notre site via des cookies ou des technologies similaires.
+Vous nous contactez par e-mail, téléphone ou en personne.
+
+<h4>6. Partage de vos données</h4>
+Nous ne partageons pas vos données personnelles avec des tiers, sauf dans les cas suivants :
+
+Fournisseurs de services : Nous pouvons partager certaines données avec des prestataires qui nous aident à gérer notre site, nos réservations ou nos communications, sous réserve qu'ils respectent nos directives en matière de confidentialité.
+Exigences légales : Nous pouvons être amenés à divulguer vos informations si la loi l'exige ou si nous estimons de bonne foi qu'une telle action est nécessaire pour nous conformer à une procédure judiciaire.
+
+<h4>7. Conservation de vos données</h4>
+Nous ne conservons vos données personnelles que le temps nécessaire pour accomplir les finalités pour lesquelles elles ont été collectées, conformément aux exigences légales et réglementaires.
+
+<h4>8. Sécurité de vos données</h4>
+Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger vos données personnelles contre tout accès non autorisé, utilisation abusive, perte ou destruction.
+
+<h4>9. Vos droits</h4>
+En vertu du RGPD, vous disposez des droits suivants concernant vos données personnelles :
+
+Droit d'accès : vous avez le droit de demander une copie des données que nous détenons à votre sujet.
+Droit de rectification : vous pouvez demander la correction des données inexactes ou incomplètes.
+Droit à l'effacement : vous pouvez demander la suppression de vos données personnelles.
+Droit à la limitation du traitement : vous pouvez demander que nous limitions l'utilisation de vos données.
+Droit à la portabilité des données : vous pouvez recevoir vos données dans un format structuré et lisible.
+Droit d'opposition : vous pouvez vous opposer à certains traitements de vos données, notamment en matière de marketing direct.
+Pour exercer ces droits, vous pouvez nous contacter à l’adresse suivante :
+<br>
+E-mail : contact@lepicardeau.com<br>
+Adresse postale : 5 Rue du Picardeau, 77140 Nemours, France
+
+<h4>10. Cookies et technologies similaires</h4>
+Nous utilisons des cookies pour améliorer l’expérience utilisateur sur notre Site. Pour plus d’informations sur l’utilisation des cookies, veuillez consulter notre Politique en Matière de Cookies.
+
+<h4>11. Modifications de la politique de confidentialité</h4>
+Le Picardeau se réserve le droit de modifier cette Politique de Confidentialité à tout moment. Nous vous invitons à consulter régulièrement cette page pour rester informé des éventuelles mises à jour.
+
+<h4>12. Contact</h4>
+Pour toute question relative à cette Politique de Confidentialité ou à l’utilisation de vos données personnelles, vous pouvez nous contacter :<br>
+
+E-mail : contact@lepicardeau.com<br>
+Adresse postale : 5 Rue du Picardeau, 77140 Nemours, France<br>
+Téléphone : +33 1 23 45 67 89
+
+
+
+</div>
+
+      </main>
+
+      <!-- O div onde o footer será carregado -->
+    <div id="footer"></div>
+
+    <!-- Script para carregar o footer dinamicamente -->
+ <script>
+   // Carregar o conteúdo do arquivo footer.html e inserir no div com ID "footer"
+   fetch('/pages/footer.html')
+       .then(response => response.text())
+       .then(data => {
+           document.getElementById('footer').innerHTML = data;
+       });
+</script>
+
+     <!-- Script para carregar a navbar dinamicamente -->
+     <script>
+        // Carregar o conteúdo do arquivo navbar.html e inserir no div com ID "navbar"
+        fetch('/pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+
+</body>
+</html>

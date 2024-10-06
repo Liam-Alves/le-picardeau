@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Picardeau - Notre Histoire</title>
+     <!-- Link CSS -->
+     <link rel="stylesheet" href="/css/main.css">
+     <script src="/public/script/script.js"></script>
+ 
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (necessário para dropdowns, carrosséis etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+    
+    
+    <!-- O div onde a navbar será carregada -->
+    <div id="navbar"></div>
+    
+    <main class="main-content">
+        <div class="text-container">
+          <h2>CONDITIONS D’UTILISATION</h2><br>
+<h4>1. Introduction</h4>
+Les présentes Conditions d’Utilisation (ci-après dénommées "les Conditions") définissent les modalités d'accès et d'utilisation du site Le Picardeau (ci-après dénommé "le Site"). En accédant à ce Site, vous acceptez sans réserve les Conditions énoncées ci-dessous. Si vous n'acceptez pas ces Conditions, nous vous invitons à ne pas utiliser ce Site.
+
+
+<h4>2. Accès au site</h4>
+L’accès au Site est ouvert à tout utilisateur ayant un accès à Internet. Les frais d'accès et d'utilisation du réseau de télécommunication sont à la charge de l’utilisateur, selon les modalités fixées par ses fournisseurs d’accès et opérateurs de télécommunications.
+
+<br>Le Picardeau se réserve le droit, sans préavis ni indemnité, de fermer temporairement ou définitivement le Site ou l’accès à certains services à des fins de maintenance ou d'amélioration, ou pour tout autre motif légitime.
+
+
+<h4>3. Contenu du site</h4>
+Tous les textes, images, vidéos, graphiques, logos et autres contenus disponibles sur le Site (ci-après "le Contenu") sont protégés par des droits d’auteur et autres droits de propriété intellectuelle. Le Picardeau détient ou a reçu les autorisations nécessaires pour utiliser l'ensemble des éléments présents sur le Site.
+
+Toute reproduction, représentation, modification, publication, transmission ou dénaturation, totale ou partielle, du Contenu sans autorisation préalable écrite de Le Picardeau est strictement interdite et pourra faire l'objet de poursuites judiciaires.
+
+<h4>4. Utilisation du site</h4>
+En utilisant ce Site, vous vous engagez à : <br>
+
+Respecter les présentes Conditions d’Utilisation et toutes les lois applicables.
+Ne pas utiliser le Site pour des activités illégales, frauduleuses ou malveillantes.
+Ne pas porter atteinte aux droits de propriété intellectuelle de Le Picardeau ou de tout tiers.
+Ne pas tenter de nuire au bon fonctionnement du Site, en particulier via des tentatives de hacking, la diffusion de virus, ou toute autre action malveillante.
+
+<h4>5.  Réservation en ligne</h4>
+Le Picardeau propose un système de réservation en ligne pour ses services d’hébergement et d’événements. Toute réservation effectuée via le Site implique l’acceptation des Conditions Générales de Vente, disponibles ici.
+
+Les informations fournies par les utilisateurs lors des réservations doivent être exactes, complètes et à jour. Le Picardeau se réserve le droit de refuser ou d’annuler toute réservation si des informations inexactes ou frauduleuses sont détectées.
+
+<h4>6. Protection des données personnelles</h4>
+Le Picardeau accorde une grande importance à la protection de vos données personnelles. Pour plus d’informations sur la collecte, l’utilisation et la protection de vos données, veuillez consulter notre Politique de Confidentialité.
+
+
+<h4>7. Liens hypertextes</h4>
+Le Picardeau peut proposer des liens vers des sites tiers. Ces sites sont indépendants de Le Picardeau, qui n’assume aucune responsabilité quant à leur contenu ou aux pratiques en matière de protection des données personnelles.
+
+Tout lien hypertexte renvoyant vers le Site doit être autorisé au préalable par Le Picardeau. Nous nous réservons le droit de retirer cette autorisation à tout moment si nous estimons que le lien contrevient à nos intérêts ou à nos politiques.
+
+<h4>8. Limitation de responsabilité</h4>
+Le Picardeau s'efforce de fournir sur le Site des informations exactes et à jour. Cependant, nous ne garantissons pas l'exactitude, la complétude ou l'actualité des informations présentes sur le Site.
+
+En conséquence, Le Picardeau ne pourra être tenu responsable pour tout dommage, direct ou indirect, résultant de l'utilisation du Site, de l'impossibilité d'accéder au Site ou des erreurs ou omissions contenues sur le Site.
+
+<h4>9. Modification des conditions</h4>
+Le Picardeau se réserve le droit de modifier les présentes Conditions à tout moment, sans préavis. Il est recommandé aux utilisateurs de consulter régulièrement cette page pour prendre connaissance des éventuelles mises à jour. L'utilisation continue du Site après la publication des modifications constitue une acceptation de ces nouvelles Conditions.
+
+
+
+<h4>10. Loi applicable et juridiction</h4>
+Les présentes Conditions d’Utilisation sont régies par le droit français. Tout différend relatif à l'utilisation du Site sera soumis à la compétence exclusive des tribunaux français.
+
+
+
+
+
+</div>
+
+      </main>
+
+      <!-- O div onde o footer será carregado -->
+    <div id="footer"></div>
+
+    <!-- Script para carregar o footer dinamicamente -->
+ <script>
+   // Carregar o conteúdo do arquivo footer.html e inserir no div com ID "footer"
+   fetch('/pages/footer.html')
+       .then(response => response.text())
+       .then(data => {
+           document.getElementById('footer').innerHTML = data;
+       });
+</script>
+
+     <!-- Script para carregar a navbar dinamicamente -->
+     <script>
+        // Carregar o conteúdo do arquivo navbar.html e inserir no div com ID "navbar"
+        fetch('/pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+
+</body>
+</html>
