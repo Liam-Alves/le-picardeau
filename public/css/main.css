@@ -47,8 +47,9 @@ p {
 /* Estilo para a logo */
 .navbar-brand img {
     max-height: 80px; /* Ajuste o tamanho da logo conforme necessário */
-    margin-right: 50px; /* Espaçamento para o logo não encostar nos itens de menu */
+    margin-right: 20px; /* Espaçamento entre o logo e o menu */
     object-fit: contain; /* Garante que o logo não distorça */
+    display: block;
 }
 
 /* Centralizar o logo */
@@ -58,10 +59,23 @@ p {
     align-items: center;
     font-family: 'Hind Madurai', sans-serif; 
     background-color: var(--cor-emerald);
-    padding: 80px;
+    padding: 30px;
 }
 
 /* Estilo para os links do menu */
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens de menu com o logo */
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0; /* Remove a margem da lista */
+    padding: 0; /* Remove o padding da lista */
+
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Espaçamento entre os itens de menu */
+}
+
 .navbar-nav .nav-link {
     color: var(--cor-clara); /* Substitua por outra cor conforme necessário */
     font-size: 1.2rem; /* Ajuste o tamanho da fonte */
@@ -101,7 +115,7 @@ p {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f8e4d2' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }/*Você pode usar qualquer valor de cor, inclusive valores em hexadecimal, se preferir. Exemplo para azul: stroke='%23007bff' (onde %23 é o código para # em URLs).*/
 
 @media (max-width: 992px) {
@@ -111,6 +125,15 @@ p {
     }
   }
   
+
+  .col-12.text-center h1 {
+    margin-top: 50px; /* Ajuste esse valor conforme necessário */
+}
+
+.col-12.text-center h3 {
+    margin-top: 20px; /* Um pequeno espaçamento entre o título e o subtítulo */
+}
+
 
 a {
     color: var(--cor-clara); /* Links  */
@@ -483,4 +506,155 @@ h3 {
     text-align: center;
    padding-top: 30px;
    padding-bottom: 30px;
+}
+
+
+.famiglia-section {
+    background-color: var(--cor-eucalyptus); /* Cor de fundo laranja */
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.famiglia-section h2 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 30px; /* Bordas mais arredondadas nos cartões */
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%; /* Garante que os cartões ocupem a largura total */
+    max-width: 300px; /* Limita a largura máxima dos cartões */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+}
+
+.image-container {
+    width: 100%;
+    max-width: 250px; /* Limita a largura da imagem */
+    height: 350px; /* Define a altura da imagem */
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    border-top-left-radius: 150px; /* Faz a parte superior ser arredondada */
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 0; /* Deixa a parte inferior reta */
+    border-bottom-right-radius: 0;
+    background-color: #fff; /* Cor de fundo para visualizar o formato */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o contêiner corretamente */
+}
+
+.team-member h3 {
+    font-family: 'Museo W01 700', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-member .role {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.2rem;
+    color: var(--cor-tiki-torch); /* Cor laranja para a função */
+    margin-bottom: 10px;
+}
+
+.team-member .description {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .famiglia-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 280px; /* Ajusta a proporção para telas menores */
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+}
+
+/* Define uma proporção de 16:9 para o carrossel */
+.carousel {
+    position: relative;
+    width: 90%; /* Ajuste a largura como desejar, por exemplo, 80% da página */
+    max-width: 1200px; /* Defina uma largura máxima para telas grandes, opcional */
+    margin: 0 auto; /* Centraliza o carrossel na página */
+    height: 0;
+    padding-bottom: 42.85%; /* Proporção de 16:9 (9 / 16 * 100 = 56.25%) */
+    overflow: hidden;
+    border-radius: 20px; /* Adiciona bordas arredondadas, opcional */
+   
+}
+
+.carousel-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que as imagens sejam cortadas de forma adequada sem distorção */
+    border-radius: 10px; /* Mesmas bordas arredondadas nas imagens, opcional */
+}
+
+/* Ajuste para manter a proporção 16:9 no carrossel principal */
+#carouselExampleSlidesOnly {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+#carouselExampleSlidesOnly .carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.green-section {
+    background-color: var(--cor-emerald); /* Ou use #173426, caso prefira */
+    padding: 80px 0; /* Adiciona padding ao redor do conteúdo */
+}
+
+.green-section h1 {
+    color: var(--cor-tiki-torch); /* Para garantir que o texto fique legível no fundo verde */
+}
+
+.green-section h3{
+    color: var(--cor-clara);
+    padding-bottom: 30px;
+}
+
+.green-section .carousel-inner img {
+    border-radius: 10px; /* Para ajustar bordas arredondadas nas imagens, opcional */
 }
