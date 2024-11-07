@@ -49,6 +49,19 @@ router.get('/calendar', authenticateToken, async (req, res) => {
     // código para exibir calendário
 });
 
+// Endpoint para retornar eventos para o calendário
+router.get('/calendar', authenticateToken, async (req, res) => {
+    try {
+        const query = 'SELECT id, checkin, checkout, status FROM reservations';
+        const result = await pool.query(query);
+        res.json(result.rows); // Retorna todas as reservas
+    } catch (error) {
+        console.error('Erro ao carregar eventos:', error);
+        res.status(500).json({ error: 'Erro ao carregar eventos' });
+    }
+});
+
+
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
