@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const { Pool } = require('pg'); // Biblioteca para conexão com PostgreSQL
 const app = express();
 const PORT = process.env.PORT || 3000;
+const adminRoutes = require('./Router/adminRoutes'); // ou allRoutes
+app.use('/api', adminRoutes); // Certifique-se de que os endpoints usem o prefixo /api se necessário
+
 
 // Configuração da conexão com o banco de dados PostgreSQL
 const pool = new Pool({

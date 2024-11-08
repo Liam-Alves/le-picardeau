@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Painel de Administração</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login Administrador</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+    <script src="/script/login.js"></script>
+</body>
+</html>

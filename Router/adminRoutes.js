@@ -29,6 +29,19 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// Endpoint para obter todas as reservas
+router.get('/api/admin/reservations', async (req, res) => {
+    // Código para buscar reservas no banco de dados
+});
+
+// Endpoint para cancelar uma reserva específica
+router.delete('/api/admin/reservations/:id', async (req, res) => {
+    const reservationId = req.params.id;
+    // Código para cancelar a reserva no banco de dados
+});
+
+module.exports = router;
+
 // Endpoint para listar reservas com filtros
 router.get('/reservations', authenticateToken, async (req, res) => {
     // código para buscar reservas

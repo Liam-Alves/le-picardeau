@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem('token'); // O token de autenticação
+
+    if (!token) {
+        window.location.href = '/pages/login.html'; // Redireciona para o login se não estiver autenticado
+        return;
+    }
+    
     const calendarEl = document.getElementById('calendar');
 
     // Inicializando o FullCalendar
@@ -38,38 +44,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     calendar.render(); // Renderiza o calendário na página
-
-    // Função para carregar e exibir reservas na tabela
-    function loadReservations() {
-        fetch('/admin/reservations', {
-            headers: { 'Authorization': `Bearer ${token}` }
-        })
-        .then(response => response.json())
-        .then(data => {
-            const tableBody = document.getElementById('reservations-table').querySelector('tbody');
-            tableBody.innerHTML = '';
-            data.forEach(reservation => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${reservation.id}</td>
-                    <td>${reservation.checkin}</td>
-                    <td>${reservation.checkout}</td>
-                    <td>${reservation.guests}</td>
-                    <td>${reservation.status}</td>
-                    <td><button onclick="cancelReservation(${reservation.id})">Cancelar</button></td>
-                `;
-                tableBody.appendChild(row);
-            });
+// Função para carregar e exibir reservas na tabela
+function loadReservations() {
+    fetch('/api/admin/reservations', { // Atualize este endpoint conforme o necessário
+        headers: { 'Authorization': `Bearer ${token}` }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.getElementById('formulaire-reservation-gites').querySelector('tbody');
+        tableBody.innerHTML = '';
+        data.forEach(reservation => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${reservation.id}</td>
+                <td>${reservation.checkin}</td>
+                <td>${reservation.checkout}</td>
+                <td>${reservation.guests}</td>
+                <td>${reservation.status}</td>
+                <td><button onclick="cancelReservation(${reservation.id})">Cancelar</button></td>
+            `;
+            tableBody.appendChild(row);
         });
-    }
+    });
+}
 
-    // Função para cancelar reservas
-    function cancelReservation(id) {
-        fetch(`/admin/reservations/${id}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${token}` }
-        }).then(() => loadReservations());
-    }
+// Função para cancelar reservas
+function cancelReservation(id) {
+    fetch(`/api/admin/reservations/${id}`, { // Atualize este endpoint
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${token}` }
+    })
+    .then(() => loadReservations());
+}
 
-    loadReservations(); // Carrega as reservas ao iniciar a página
 });
