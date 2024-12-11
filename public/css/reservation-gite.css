@@ -1,0 +1,54 @@
+@import url('https://db.onlinewebfonts.com/c/5cfbe76f00e7c4d6ba5d963f6c179606?family=Museo+W01+700');
+
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    background-color: #f8f9fa;
+    color: #323130;
+
+}
+
+h1, h2 {
+    font-family: 'Museo W01 700', sans-serif; /* Usando a fonte Museo */
+    font-size: 4rem; /* Ajuste o tamanho conforme necessário */
+    font-weight: 700; /* Peso da fonte */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+    color: #c06146;
+  
+   
+}
+
+.col-md-6 p{
+
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #323130;
+    text-align: left;
+   
+}
+
+.carousel {
+    position: relative;
+    width: 90%; 
+    max-width: 1200px; /* Define uma largura máxima */
+    overflow: hidden; /* Garante que o conteúdo extra seja cortado */
+    border-bottom-left-radius: 40px; /* Arredonda os cantos inferiores */
+    border-bottom-right-radius: 40px;
+    max-height: 450px; /* Define uma altura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+
+.carousel img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 100%; /* Ajusta a altura da imagem ao contêiner */
+    object-fit: cover; /* Faz com que a imagem preencha o contêiner sem distorções */
+    border-bottom-left-radius: 40px; /* Arredonda os cantos inferiores da imagem */
+    border-bottom-right-radius: 40px;
+}

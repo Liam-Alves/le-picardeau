@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser'); 
 const { Pool } = require('pg'); // Biblioteca para conexão com PostgreSQL
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const adminRoutes = require('./Router/adminRoutes'); // ou allRoutes
 app.use('/api', adminRoutes); // Certifique-se de que os endpoints usem o prefixo /api se necessário
 
@@ -80,9 +80,6 @@ app.post('/admin/login', async (req, res) => {
         res.status(401).json({ error: 'Credenciais inválidas' });
     }
 });
-
-const adminRoutes = require('./Router/adminRoutes');
-app.use('/admin', adminRoutes); // Rotas do painel de administração
 
 
 

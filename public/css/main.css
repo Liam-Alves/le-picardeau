@@ -609,8 +609,9 @@ h3 {
     padding-bottom: 42.85%; /* Proporção de 16:9 (9 / 16 * 100 = 56.25%) */
     overflow: hidden;
     border-radius: 20px; /* Adiciona bordas arredondadas, opcional */
-   
+    
 }
+
 
 .carousel-inner {
     position: absolute;

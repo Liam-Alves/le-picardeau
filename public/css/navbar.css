@@ -1,0 +1,120 @@
+@import url('https://db.onlinewebfonts.com/c/5cfbe76f00e7c4d6ba5d963f6c179606?family=Museo+W01+700');
+
+
+
+/* Definir as cores principais */
+:root {
+    --cor-clara: #f8e4d2;
+    --cor-preta: #323130;
+    --cor-emerald: #173426;
+    --cor-eucalyptus: #516b60;
+    --cor-tiki-torch: #c06146;
+    --cor-glazed-pottery: #dcbea6;
+    --cor-peacoat : #ebc57c;
+}
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    background-color: #f8f9fa;
+    color: #323130;
+}
+
+h1, h2 {
+    font-family: 'Museo W01 700', sans-serif; /* Usando a fonte Museo */
+    font-size: 4rem; /* Ajuste o tamanho conforme necessário */
+    font-weight: 700; /* Peso da fonte */
+    color: var(--cor-tiki-torch); /* Cor para o título, pode ajustar conforme necessário */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+}
+
+p {
+    font-family: 'Hind Madurai', sans-serif; /* Font padrão para o parágrafo */
+    font-size: 1.25rem; /* Tamanho do texto do parágrafo */
+    color: (var(--cor-preta)); /* Cor do texto */
+    text-align: center; /* Centraliza o parágrafo */
+    margin-bottom: 40px; /* Espaçamento entre o parágrafo e o botão */
+}
+
+
+/* Estilo para a logo */
+.navbar-brand img {
+    max-height: 80px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 20px; /* Espaçamento entre o logo e o menu */
+    object-fit: contain; /* Garante que o logo não distorça */
+    display: block;
+}
+
+/* Centralizar o logo */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo à esquerda e menu à direita */
+    align-items: center;
+    font-family: 'Hind Madurai', sans-serif; 
+    background-color: var(--cor-emerald);
+    padding: 30px;
+}
+
+/* Estilo para os links do menu */
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens de menu com o logo */
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0; /* Remove a margem da lista */
+    padding: 0; /* Remove o padding da lista */
+
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Espaçamento entre os itens de menu */
+}
+
+.navbar-nav .nav-link {
+    color: var(--cor-clara); /* Substitua por outra cor conforme necessário */
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--cor-tiki-torch); /* Cor quando o mouse passar por cima */
+}
+
+/* Remover o fundo transparente padrão do Bootstrap */
+.navbar-light .navbar-nav .nav-link {
+    color: white; /* Texto branco no menu */
+}
+
+/* Estilo do dropdown */
+.navbar-nav .dropdown-menu {
+    background-color: var(--cor-eucalyptus); /* Fundo verde para o dropdown */
+    border: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--cor-clara); /* Texto branco no dropdown */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: var(--cor-eucalyptus); /* Fundo ao passar o mouse no item do dropdown */
+    color: var(--cor-glazed-pottery); /* Texto preto no hover */
+}
+
+
+/* Estilo do menu hamburguer */
+.navbar-toggler {
+    background-color: var(--cor-emerald); /* Cor do fundo para o botão */
+    border: 1px solid #fff; /* Para deixar uma borda branca ao redor */
+    border-radius: 5px; /* Deixar os cantos arredondados se necessário */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f8e4d2' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}/*Você pode usar qualquer valor de cor, inclusive valores em hexadecimal, se preferir. Exemplo para azul: stroke='%23007bff' (onde %23 é o código para # em URLs).*/
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+      display: block;
+      margin-left: auto; /* Isso move o botão para a direita */
+    }
+  }
+  

@@ -1,3 +1,7 @@
+
+
+
+
 /* Informações do gîte */
 .gites-container {
     display: flex;
@@ -5,7 +9,8 @@
     justify-content: space-between;
     gap: 40px;
     padding: 40px;
-    background-color: #f9f5f0;
+  
+    
 }
 
 .gite {
@@ -17,17 +22,19 @@
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
+    padding-top: 30px;
 }
 
 .gite-text {
     padding: 20px;
     text-align: left;
+    margin: 20px;
 }
 
 .gite-text h2 {
     color: var(--cor-tiki-torch);
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .gite-text p {
@@ -53,173 +60,35 @@
     margin: 20px auto;
 }
 
+
+
 .gite-button:hover {
     background-color: var(--cor-glazed-pottery);
+    color:#fff;
 }
 
-/* Ajuste de proporção para as imagens do carrossel */
-.carousel-item {
+.carousel-slide {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Proporção de 16:9 */
-    overflow: hidden;
-}
-
-.carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 600px) {
-    .gites-container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .gite {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .gite-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .gite-text p {
-        font-size: 1rem;
-    }
-
-    .gite-button {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .carousel-gites {
-        height: auto;
-    }
-}
-
-/* Ajustes para telas médias (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .gites-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 30px;
-    }
-
-    .gite {
-        width: calc(50% - 15px);
-    }
-
-    .gite-text h2 {
-        font-size: 1.75rem;
-    }
-
-    .gite-text p {
-        font-size: 1.1rem;
-    }
-
-    .gite-button {
-        width: fit-content;
-        padding: 10px 20px;
-    }
-}
-
-/* Ajustes para telas grandes (desktops) */
-@media (min-width: 1025px) {
-    .gites-container {
-        padding: 40px;
-        gap: 40px;
-    }
-
-    .gite {
-        width: calc(50% - 20px);
-    }
-
-    .gite-text h2 {
-        font-size: 2rem;
-    }
-
-    .gite-text p {
-        font-size: 1.2rem;
-    }
-
-    .gite-button {
-        width: fit-content;
-        padding: 10px 30px;
-    }
-}
-
-/* Ajuste para manter a proporção 16:9 no carrossel principal */
-#carouselExampleSlidesOnly {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-
-#carouselExampleSlidesOnly .carousel-inner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Estilos para os gîtes em coluna */
-.gites-container {
+    width: 90%; 
+    max-width: 1200px; /* Define uma largura máxima */
+    overflow: hidden; /* Garante que o conteúdo extra seja cortado */
+    border-bottom-left-radius: 40px; /* Arredonda os cantos inferiores */
+    border-bottom-right-radius: 40px;
+    max-height: 450px; /* Define uma altura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0;
-    padding: 0 15px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-.gite {
-    flex: 1 1 calc(33.333% - 30px); /* Cada gîte ocupa 1/3 da largura com espaçamento entre eles */
-    margin: 15px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.carousel-slide img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 100%; /* Ajusta a altura da imagem ao contêiner */
+    object-fit: cover; /* Faz com que a imagem preencha o contêiner sem distorções */
+    border-bottom-left-radius: 40px; /* Arredonda os cantos inferiores da imagem */
+    border-bottom-right-radius: 40px;
 }
 
-.gite img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
-.gite h2 {
-    font-size: 1.5rem;
-    margin-top: 15px;
-    color: #B33A00;
-}
 
-.gite p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.gite-button {
-    background-color: #D4A053;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.gite-button:hover {
-    background-color: #B33A00;
-    transition: background-color 0.3s;
-}
